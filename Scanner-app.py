@@ -7,7 +7,7 @@ import logging
 
 # --- SETTINGS ---
 # Adjust this to narrow your list (e.g., 100e9 for $100B+)
-MIN_MARKET_CAP = 50_000_000_000 
+MIN_MARKET_CAP = 50_000_000 
 
 st.set_page_config(page_title="Weighted Chicago Scanner", layout="wide")
 st.title("🏙️ Weighted S&P 500 Breakout Scanner")
