@@ -7,7 +7,7 @@ import logging
 
 # --- SETTINGS ---
 # Adjust this to narrow your list (e.g., 100e9 for $100B+)
-MIN_MARKET_CAP = 50_000_000 
+MIN_MARKET_CAP = 50_000_000_000
 
 st.set_page_config(page_title="Weighted Chicago Scanner", layout="wide")
 st.title("🏙️ Weighted S&P 500 Breakout Scanner")
@@ -38,8 +38,8 @@ if st.button('🚀 Start Weighted Scan'):
             # Use fast_info if available or standard info
             mkt_cap = t_obj.info.get('marketCap', 0)
             
-            if mkt_cap < MIN_MARKET_CAP:
-                continue # Skip small stocks immediately
+            # if mkt_cap < MIN_MARKET_CAP:
+            #     continue # Skip small stocks immediately
 
             # STEP 2: Download Price Data (Only for heavyweights)
             data = yf.download(ticker, period="3d", interval="5m", prepost=True, progress=False, auto_adjust=True)
