@@ -10,7 +10,7 @@ MIN_MARKET_CAP = 50_000_000_000
 
 st.set_page_config(page_title="Weighted Chicago Scanner", layout="wide")
 st.title("🏙️ Weighted S&P 500 Breakout Scanner")
-st.write(f"Targeting: **>${MIN_MARKET_CAP/1e9:.0f}B Market Cap** | Price > Prev IB High & Today ON High")
+st.write(f"Targeting: **>${MIN_MARKET_CAP/1e9:.0f}B Market Cap** |")
 
 warnings.filterwarnings("ignore")
 logging.getLogger('yfinance').setLevel(logging.CRITICAL)
