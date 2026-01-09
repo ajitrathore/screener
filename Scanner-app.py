@@ -90,3 +90,5 @@ if st.button('🚀 Start Live Scan'):
         st.dataframe(df_res.sort_values(by="Breakout_%", ascending=False), use_container_width=True)
     else:
         st.error("Still no matches. This suggests a data alignment issue.")
+
+st.write(f"Last checked at: {datetime.now().strftime('%H:%M:%S')} (Server Time)")
