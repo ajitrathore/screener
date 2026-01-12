@@ -63,8 +63,8 @@ if st.button('🚀 Start Weighted Scan'):
             today_df = data[data.index.normalize() == days[-1]]
 
             # Logic
-            prev_ib_high = float(yesterday_df.between_time('08:30', '09:30')['High'].max())
-            on_high = float(today_df.between_time('00:00', '08:30')['High'].max())
+            prev_ib_high = float(yesterday_df.between_time('08:30', '09:25')['High'].max())
+            on_high = float(today_df.between_time('00:00', '08:25')['High'].max())
             current_price = float(today_df['Close'].iloc[-1])
 
             if current_price > prev_ib_high and current_price > on_high:
